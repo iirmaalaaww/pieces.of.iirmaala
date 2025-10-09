@@ -17,3 +17,46 @@ body {
     width: 150px;
     border-radius: 50%; /* Trik untuk membuat gambar persegi menjadi lingkaran sempurna */
 }
+.kartu-profil {
+    width: 300px;
+    margin: 50px auto; /* 50px jarak atas/bawah, auto menengahkan kiri/kanan */
+    padding: 20px;
+    background-color: pink;
+    border-radius: 15px; /* Membuat sudut menjadi melengkung */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan */
+    text-align: center; /* Menengahkan semua teks di dalam kartu */
+}
+
+.daftar-proyek {
+    display: flex; /* Aktifkan mode Flexbox! */
+    justify-content: center; /* Pusatkan semua ke kartu tengah */
+    gap: 20px; /* Beri jarak 20px antar kartu */
+}
+
+.kartu-proyek {
+    background-coloe: #e9e9e9;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu-proyek:hover {
+    transform: translateY(-5px); /* Angkat kartu sedikit ke atas */
+    box-shadow: 0 8 px 16px rgba(0,0,0,0.2); /* Perbesar bayangannya */
+}
+
+@media (max-width: 600px) {
+    .daftar-proyek {
+        flex-direction: column; /* Change the flex direction from row to column */
+        align-items: center;    /* Center the stacked cards */
+    }
+    .kartu-profil {
+        width: 90%; /* Make the main card wider on small screens */
+    }
+}
+
+body.dark-mode {
+    bacground-color: #121212;
+    color: #f0f2f5;
+}
